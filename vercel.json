@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "functions": {
+      "api/app.py": {
+        "runtime": "@vercel/python@4.3.0",
+        "excludeFiles": "{env,*.pyc,__pycache__,.DS_Store}/**"
+      }
+    },
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      }
+    ]
+  }
+  

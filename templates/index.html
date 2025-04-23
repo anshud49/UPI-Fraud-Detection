@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Description Section -->
+<section class="description">
+    <h2>About Our Project</h2>
+    <p>Our UPI Fraud Detection System is an advanced solution designed to protect users from fraudulent transactions in the UPI ecosystem. Using machine learning algorithms, we analyze transaction patterns and UPI numbers to identify potential fraud risks in real-time.</p>
+    <p>The system provides two powerful tools:</p>
+    <ul>
+        <li>Quick UPI Number Check: Verify the safety of a UPI number</li>
+        <li>Comprehensive Transaction Analysis: Detailed assessment of transaction details</li>
+    </ul>
+</section>
+
+<!-- Options Section -->
+<section class="options">
+    <div class="option-card">
+        <h3>Check UPI Number</h3>
+        <p>Quick verification of UPI number safety</p>
+        <a href="/upi-risk-scan" class="btn">Start Check</a>
+    </div>
+    <div class="option-card">
+        <h3>Check Transaction</h3>
+        <p>Detailed transaction analysis</p>
+        <a href="/full-data-assessment" class="btn">Start Analysis</a>
+    </div>
+</section>
+{% endblock %}

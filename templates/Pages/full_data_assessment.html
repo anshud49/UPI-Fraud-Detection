@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block style %}
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/full_data_assessment.css') }}">
+{% endblock  %}
+
+{% block content %}
+<form action="/predict" method="post">
+    <div class="col">
+        <div class="col1">
+            <label>Transaction Hour:</label>
+            <input type="number" name="trans_hour" class="input-box" placeholder="0-23" required autocomplete="cc-exp-hour">
+
+            <label>Transaction Day:</label>
+            <input type="number" name="trans_day" class="input-box" placeholder="1-31" required autocomplete="cc-exp-day">
+
+            <label>Transaction Month:</label>
+            <input type="number" name="trans_month"  class="input-box" placeholder="1-12" required autocomplete="cc-exp-month">
+
+            <label>Transaction Year:</label>
+            <input type="number" name="trans_year"  class="input-box" placeholder="For Ex- 2025" required autocomplete="cc-exp-year">
+
+            <label>Transaction Amount:</label>
+            <input type="number" step="0.01" name="trans_amount" class="input-box" placeholder="In INR" required autocomplete="transaction-amount">
+        </div>
+        <div class="col2">
+            <label>Receiver's UPI Number:</label>
+            <input type="text" name="upi_number" class="input-box" placeholder="For ex- 9695123860" required autocomplete="upi-number"> 
+            
+            <label>Age:</label>
+            <input type="number" name="age"  class="input-box" placeholder="Enter age" required autocomplete="bday">
+
+            <label>State:</label>
+            <input type="number" name="state"  class="input-box" placeholder="Enter state code" required autocomplete="address-level1">
+
+            <label>ZIP Code:</label>
+            <input type="number" name="zip"  class="input-box" placeholder="Enter ZIP code" required autocomplete="postal-code">
+        </div>
+    </div>
+    <button type="submit">Predict</button>
+</form>
+{% endblock %}
+
+

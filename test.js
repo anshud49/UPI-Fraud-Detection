@@ -1,0 +1,1 @@
+document.getElementById("divsubjectgrid").style.display="flex"

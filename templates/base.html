@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/authors.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1><a href="{{ url_for('home') }}" style="text-decoration: none; color: inherit;">UPI Fraud Detection System</a></h1>
+            <div class="college-logo">
+                <img src="{{ url_for('static', filename='College/HBTU Logo.png') }}" alt="College Logo">
+                <h3>Harcourt Butler Technical University, Kanpur</h3>
+            </div>
+        </header>
+
+        <!-- UPI Systems Section -->
+        <section class="upi-systems">
+            <h2>Helpful for all UPI Apps</h2>
+            <div class="logo-scroll-container">
+                <div class="logo-scroll">
+                    <!-- First set of logos -->
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/AmazonPay.png') }}" alt="Amazon Pay" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Cred.png') }}" alt="Cred" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Phonepe.jpeg') }}" alt="PhonePe" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Paytm.png') }}" alt="Paytm" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/BHIM.png') }}" alt="BHIM" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Gpay.png') }}" alt="Google Pay" loading="lazy">
+                    </div>
+                    <!-- Duplicate set of logos for seamless loop -->
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/AmazonPay.png') }}" alt="Amazon Pay" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Cred.png') }}" alt="Cred" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Phonepe.jpeg') }}" alt="PhonePe" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Paytm.png') }}" alt="Paytm" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/BHIM.png') }}" alt="BHIM" loading="lazy">
+                    </div>
+                    <div class="logo-item">
+                        <img src="{{ url_for('static', filename='upi-app-logos/Gpay.png') }}" alt="Google Pay" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Block -->
+        {% block content %}{% endblock %}
+
+        {% if result %}
+        <div class="results {{ 'fraud' if result == 'Fraud' else 'not-fraud' }}">
+            <h3>{{ result }}</h3>
+        </div>
+        {% endif %}
+
+        <!-- Project Head Section -->
+        <section class="project-head">
+          
+            <div class="author-list">
+               
+                <div class="author-card">
+                    <h2>Project Head</h2>
+                    <img src="{{ url_for('static', filename='Authors/Project Head.jpg') }}" alt="Dr. A K Shankhwar" class="author-photo">
+                    <div class="author-info">
+                        <h3>Dr. A K Shankhwar</h3>
+                        <div class="author-links">
+                            <a href="https://www.linkedin.com/in/a-k-shankhwar-0a0a0a0a/" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ url_for('static', filename='social/Linkedin.webp') }}" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="mailto:akshankhwar@hbtu.ac.in">
+                                <img src="{{ url_for('static', filename='social/email.jpg') }}" alt="Email" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authors Section -->
+        <section class="authors">
+            <h2>Project Authors</h2>
+            <div class="author-list">
+                <div class="author-card">
+                    <img src="{{ url_for('static', filename='Authors/Anshu Dwivedi.jpeg') }}" alt="Anshu Dwivedi" class="author-photo">
+                    <div class="author-info">
+                        <h3>Anshu Dwivedi</h3>
+                        <div class="author-links">
+                            <a href="https://linkedin.com/in/anshudwivedi49" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ url_for('static', filename='social/Linkedin.webp') }}" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="mailto:anshudwivedi49@gmail.com">
+                                <img src="{{ url_for('static', filename='social/email.jpg') }}" alt="Email" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="{{ url_for('static', filename='Authors/Anshu Dwivedi.jpeg') }}" alt="Akshaya Pratap Singh" class="author-photo">
+                    <div class="author-info">
+                        <h3>Akshaya Pratap Singh</h3>
+                        <div class="author-links">
+                            <a href="https://www.linkedin.com/in/akshaya-singh-b65864229/" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ url_for('static', filename='social/Linkedin.webp') }}" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="mailto:akshaypratapsingh@gmail.com">
+                                <img src="{{ url_for('static', filename='social/email.jpg') }}" alt="Email" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="{{ url_for('static', filename='Authors/Anshu Dwivedi.jpeg') }}" alt="Bipin Singh" class="author-photo">
+                    <div class="author-info">
+                        <h3>Bipin Singh</h3>
+                        <div class="author-links">
+                            <a href="https://www.linkedin.com/in/bipinyct/" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ url_for('static', filename='social/Linkedin.webp') }}" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="mailto:bipinsingh@gmail.com">
+                                <img src="{{ url_for('static', filename='social/email.jpg') }}" alt="Email" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="{{ url_for('static', filename='Authors/Anshu Dwivedi.jpeg') }}" alt="Aayush Pandey" class="author-photo">
+                    <div class="author-info">
+                        <h3>Aayush Pandey</h3>
+                        <div class="author-links">
+                            <a href="https://www.linkedin.com/in/aayush-pandey-7bb434202/" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ url_for('static', filename='social/Linkedin.webp') }}" alt="LinkedIn" class="social-icon">
+                            </a>
+                            <a href="mailto:aayushpandey@gmail.com">
+                                <img src="{{ url_for('static', filename='social/email.jpg') }}" alt="Email" class="social-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        fetch('/clear-result', { method: 'POST' });
+    </script>
+</body>
+</html>

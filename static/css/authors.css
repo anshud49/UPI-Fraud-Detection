@@ -1,0 +1,119 @@
+/* Authors Section Styles */
+.authors {
+    padding: 2rem;
+    text-align: center;
+}
+
+.authors h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+/* Project Head Section Styles */
+.project-head {
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-head h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.project-head .author-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-head .author-card {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.author-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.author-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+    transform: translateY(-5px);
+}
+
+.author-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #3498db;
+}
+
+.author-info h3 {
+    font-size: 1rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.author-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* LinkedIn Icon */
+.author-links img[src*="Linkedin"] {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Email Icon */
+.author-links img[src*="email"] {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top:-5px;
+    transition: transform 0.3s ease;
+}
+
+.author-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .author-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .author-list {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+} 

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block style %}
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/upi_number.css') }}">
+{% endblock  %}
+
+
+{% block content %}
+<form action="/predict_upi_only" method="post">
+    <label>Receiver's UPI Number:</label>
+            <input type="text" name="upi_number" class="input-box" placeholder="For ex- 9695123860" required autocomplete="upi-number">
+    <div class="col">
+        <div class="col1">
+  
+        </div>
+        <div class="col2">
+            
+        </div>
+    </div>
+    <button type="submit">Scan UPI</button>
+</form>
+{% endblock %}

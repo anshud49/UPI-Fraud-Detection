@@ -1,0 +1,115 @@
+.container
+{
+    height: 400px;
+    top:200px;
+}
+
+.results
+{
+    bottom: 100px;
+}
+
+/* UPI Risk Scan Form Styles */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem 1.5rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin: 0 auto 2rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.input-box::placeholder {
+    color: #95a5a6;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Results Styles */
+.results {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 600px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+}
+
+.results.fraud {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 2px solid #ef9a9a;
+}
+
+.results.not-fraud {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #a5d6a7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .input-box {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        max-width: 100%;
+    }
+}
